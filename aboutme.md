@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Thank you for the interest.
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I am a graduate student at [ASU](https://www.asu.edu/) in [computer science](https://cidse.engineering.asu.edu/). I am starting with writing short articles in the field of Data Science and Machine Learning.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- Former software engineer at [BigBasket.com](bigbasket.com) and [Aricent](aricent.com).
+- Runner and Cyclist (My cycle got stolen recently!)
+- Pythonista. (Language not a problem)
+- Likes to travel and take pictures.
 
 What else do you need?
 
-### my history
+### my vlog
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I shot and edited a [video](https://www.youtube.com/watch?v=bFj3R9JbolY&t=170s) and hopefully **it must be nice**.
