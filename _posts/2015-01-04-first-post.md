@@ -7,7 +7,7 @@ tags: [data science, machine learning]
 
 For instance consider the data set with 100 objects to train.
 
-**Random subsampling**: Randomly split shuffled 100 objects into train set and test set. It can be 80–20, 70–30, 60–40. This is also called as Hold-out.
+**Random subsampling**: Randomly split shuffled 100 objects into train set and test set. It can be 80–20, 70–30, 60–40. This is also called as **Hold-out**.
 
 Good for huge data. If you are getting similar scores and optimal model’s parameters with some of your iterations.
 
