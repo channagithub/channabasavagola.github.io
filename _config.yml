@@ -47,7 +47,6 @@ navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
 page-col: "#FFFFFF"
 link-col: "#008AFF" 
-#132d4c
 hover-col: "#0085A1"
 footer-col: "#F5F5F5"
 footer-text-col: "#777777"
@@ -79,14 +78,14 @@ social-network-links:
   twitter: Channabasava_G
 #  reddit: yourname
 #  google-plus: +DeanAttali
- linkedin: channabasava-gola
+#  linkedin: channabasava-gola
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
- instagram: by_channa
- # youtube: user/deanat78
+#  instagram: by_channa
+#  youtube: user/deanat78
 #  spotify: yourname
- telephone: +14806929389
+#  telephone: +14806929389
 #  steam: deanat78
 #  twitch: yourname
 #  yelp: yourname
@@ -96,8 +95,8 @@ share-links-active:
   twitter: true
   facebook: true
   google: false
-  linkedin: true
-  instagram: true
+  # linkedin: true
+  # instagram: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
