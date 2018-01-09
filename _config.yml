@@ -107,7 +107,7 @@ url-pretty: "https://channabasavagola.github.io/"  # eg. "deanattali.com/beautif
 disqus: "channabasava"
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-112265001-1"
 
 # Google Tag Manager ID
 #gtm: ""
