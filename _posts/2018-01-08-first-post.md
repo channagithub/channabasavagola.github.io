@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Cross validation techniques!
+subtitle: Differences | Takeaway
 image: /img/firstPost.jpeg
 tags: [data science, machine learning]
+comments: true
 ---
 
 For instance consider the data set with 100 objects to train.
