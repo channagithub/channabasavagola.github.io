@@ -10,7 +10,7 @@ My name is Channabasava Gola. I am a graduate student at [ASU](https://www.asu.e
 - Runner and Cyclist (My cycle got stolen recently!)
 - Pythonista. (Language not a problem)
 - Likes to travel and take pictures.
-
+- I'm reading the book 'The inevitable'.
 
 ### My vlog
 
