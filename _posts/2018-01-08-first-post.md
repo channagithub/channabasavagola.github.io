@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cross validation techniques!
+title: Cross validation techniques
 subtitle: Differences | Takeaway
 image: /img/firstPost.jpeg
 tags: [data science, machine learning]
