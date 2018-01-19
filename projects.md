@@ -8,7 +8,8 @@ title: Projects
 
 <img src="/img/rainfallPredictionImage.png" alt="rainfallPredictionImage" style="width: 700px;"/>
 
-	Accordingly to this prediction, rainfall in Bangalore will increase!
+Accordingly to this prediction, rainfall in Bangalore will increase! 
+A detailed exploratory data analysis can be found [here](https://github.com/channabasavagola/rainfall-prediction).
 
 **[Learning JS](https://github.com/channabasavagola/myBookmarker)**:  
 - I have visualized my browsing history. This works for Mac. To make this work on windows, you need to change the path of "History" file.
