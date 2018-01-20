@@ -8,10 +8,14 @@ My name is Channabasava Gola. I am a graduate student at [ASU](https://www.asu.e
 
 - [Projects](./../projects)
 - Former software engineer at [BigBasket.com](https://www.bigbasket.com/) and [Aricent](https://www.aricent.com/).
-- Runner and Cyclist (My cycle got stolen recently!)
 - Pythonista. (Language not a problem)
-- Likes to travel and take pictures.
 - I'm [reading](https://www.goodreads.com/user/show/59536279-channabasava-gola) the book 'The inevitable'.
+- Runner and Cyclist (My cycle got stolen recently!)
+- Likes to travel and take pictures.
+- And thanks to [David Robinson](https://twitter.com/drob) to retweet and help me grow.
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Channabasava_G?ref_src=twsrc%5Etfw">@Channabasava_G</a> starts his blog with a nice two-part roundup of machine learning metrics, including advantages and disadvantages <a href="https://t.co/OeN8NQhVTq">https://t.co/OeN8NQhVTq</a> <a href="https://twitter.com/hashtag/datablog?src=hash&amp;ref_src=twsrc%5Etfw">#datablog</a> <a href="https://t.co/X34kbk7b0Y">pic.twitter.com/X34kbk7b0Y</a></p>&mdash; David Robinson (@drob) <a href="https://twitter.com/drob/status/953678615404843009?ref_src=twsrc%5Etfw">January 17, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 ### My vlog
 
