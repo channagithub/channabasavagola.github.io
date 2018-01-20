@@ -16,8 +16,9 @@ My name is Channabasava Gola. I am a graduate student at [ASU](https://www.asu.e
 
 - Runner and Cyclist (My cycle got stolen recently!)
 
- 	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">went for a 103.7 kilometer Ride. <a href="https://t.co/0OfemjJMpB">https://t.co/0OfemjJMpB</a> <a href="https://twitter.com/hashtag/strava?src=hash&amp;ref_src=twsrc%5Etfw">#strava</a></p>&mdash; Channa (@Channabasava_G) <a href="https://twitter.com/Channabasava_G/status/954799470729809920?ref_src=twsrc%5Etfw">January 20, 2018</a></blockquote>
+   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">went for a 103.7 kilometer Ride. <a href="https://t.co/0OfemjJMpB">https://t.co/0OfemjJMpB</a> <a href="https://twitter.com/hashtag/strava?src=hash&amp;ref_src=twsrc%5Etfw">#strava</a></p>&mdash; Channa (@Channabasava_G) <a href="https://twitter.com/Channabasava_G/status/954799470729809920?ref_src=twsrc%5Etfw">January 20, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 
 - Likes to travel and take pictures.
