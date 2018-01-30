@@ -19,6 +19,6 @@ Good for huge data. If you are not getting similar scores and different optimal 
 
 One can be a victim of skewed target values with Random subsampling and K-fold which can be fixed by **stratification**. Stratification makes sure that you get similar target distribution in each of your folds (chunks) of your data.
 
-**Leave-one-out**: Special case of K-fold. K = 100 (in our example). Train your model with 99 objects, test it on 100th object. Repeat this with leaving out one object each time. This should take you 100 iterations. In our example this is *100 times slower than random subsampling*.
+**Leave-one-out**: Special case of K-fold. K = 100 (in our example). Train your model with 99 objects, test it on 100th object. Repeat this with leaving out one object each time. This should take you 100 iterations. In our example this is *100 times slower than random subsampling*. This is also called as **JackKnife resampling**. 
 
 Good for less data and unbalanced dataset and target values.
