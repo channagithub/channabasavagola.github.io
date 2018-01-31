@@ -14,7 +14,7 @@ A detailed exploratory data analysis can be found [here](https://github.com/chan
 **[Tennis dataset analysis by visualization](https://public.tableau.com/profile/channabasava.gola#!/vizhome/10YearsAustralianOpen2008-2017Final/Dashboard1)**:  
 - Visualization should speak, not words.
 
-<img src="/img/viz.png" alt="viz" style="width: 600px;"/>
+[<img src="/img/viz.png" alt="viz" style="width: 600px;"/>](/img/viz.png)
 
 **[My chrome browsing history visualization](https://github.com/channabasavagola/myBrowsingAnalysis)**:  
 - I have visualized my browsing history. This works for Mac. To make this work on windows, you need to change the path of "History" file.

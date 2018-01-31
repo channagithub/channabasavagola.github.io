@@ -15,7 +15,7 @@ My name is Channabasava Gola. I am a graduate student at [ASU](https://www.asu.e
 	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Channabasava_G?ref_src=twsrc%5Etfw">@Channabasava_G</a> starts his blog with a nice two-part roundup of machine learning metrics, including advantages and disadvantages <a href="https://t.co/OeN8NQhVTq">https://t.co/OeN8NQhVTq</a> <a href="https://twitter.com/hashtag/datablog?src=hash&amp;ref_src=twsrc%5Etfw">#datablog</a> <a href="https://t.co/X34kbk7b0Y">pic.twitter.com/X34kbk7b0Y</a></p>&mdash; David Robinson (@drob) <a href="https://twitter.com/drob/status/953678615404843009?ref_src=twsrc%5Etfw">January 17, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-- Runner and Cyclist (My cycle got stolen recently!)
+- Runner and Cyclist.
 
    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">went for a 103.7 kilometer Ride. <a href="https://t.co/0OfemjJMpB">https://t.co/0OfemjJMpB</a> <a href="https://twitter.com/hashtag/strava?src=hash&amp;ref_src=twsrc%5Etfw">#strava</a></p>&mdash; Channa (@Channabasava_G) <a href="https://twitter.com/Channabasava_G/status/954799470729809920?ref_src=twsrc%5Etfw">January 20, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
