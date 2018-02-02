@@ -11,7 +11,7 @@ title: Projects
 Accordingly to this prediction, rainfall in Bangalore will increase! 
 A detailed exploratory data analysis can be found [here](https://github.com/channabasavagola/rainfall-prediction).
 
-**[Tennis dataset analysis by visualization](https://public.tableau.com/profile/channabasava.gola#!/vizhome/10YearsAustralianOpen2008-2017Final/Dashboard1)**:  
+**Tennis dataset analysis by visualization ([Tableau public](https://public.tableau.com/profile/channabasava.gola#!/vizhome/10YearsAustralianOpen2008-2017Final/Dashboard1))**:  
 - Visualization should speak, not words.
 
 [<img src="/img/viz.png" alt="viz" style="width: 600px;"/>](/img/viz.png)
