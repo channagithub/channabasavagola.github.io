@@ -29,4 +29,4 @@ My top visited website is Google, because I ask a lot of questions. And second m
 <img src="/img/finalGIF.gif" alt="finalGIF" style="width: 950px;"/>
 
 **Multimedia Web Databases Project**:  
-- Developed movie recommendation module using Latent Factor Analysis. Have used MovieLens dataset. Used SVD, LDA and CP decomposition on user movie ratings matrix. Recommended movies to user by calculating implicit ratings.
+- MWDB academic project which was very interesting to mine the dataset provided. We had MovieLens dataset. Columns were, Movies, there genres, comments, users watched, actors acted. In different data tables. We used TF, TF-IDF to map genres, movies and actors to comments/tag vector space. Then performed statistical analysis to figure out how comments differentiate movies or actors or genres. Then we went on build recommender system by latent factor analysis, used discriminative (SVD, PCA) and generative (LDA) to calculate implicit ratings and recommend based on the new ratings.
