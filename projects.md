@@ -11,7 +11,7 @@ title: Projects
 Accordingly to this prediction, rainfall in Bangalore will increase! 
 A detailed exploratory data analysis can be found [here](https://github.com/channabasavagola/rainfall-prediction).
 
-**Tennis dataset analysis by visualization ([Tableau public](https://public.tableau.com/profile/channabasava.gola#!/vizhome/10YearsAustralianOpen2008-2017Final/Dashboard1))**:  
+**[Tennis dataset analysis](https://github.com/channabasavagola/australianOpen) by visualization ([Tableau public](https://public.tableau.com/profile/channabasava.gola#!/vizhome/10YearsAustralianOpen2008-2017Final/Dashboard1))**:  
 - Visualization should speak, not words.
 
 [<img src="/img/viz.png" alt="viz" style="width: 600px;"/>](/img/viz.png)
@@ -29,4 +29,4 @@ My top visited website is Google, because I ask a lot of questions. And second m
 <img src="/img/finalGIF.gif" alt="finalGIF" style="width: 950px;"/>
 
 **Multimedia Web Databases Project**:  
-- MWDB academic project which was very interesting to mine the dataset provided. We had MovieLens dataset. Columns were, Movies, there genres, comments, users watched, actors acted. In different data tables. We used TF, TF-IDF to map genres, movies and actors to comments/tag vector space. Then performed statistical analysis to figure out how comments differentiate movies or actors or genres. Then we went on build recommender system by latent factor analysis, used discriminative (SVD, PCA) and generative (LDA) to calculate implicit ratings and recommend based on the new ratings.
+- MWDB academic project which was very interesting to mine the dataset provided. We had MovieLens dataset. Columns were, Movies, there genres, comments, users watched, actors acted. In different data tables. We used TF, TF-IDF to map genres, movies and actors to comments/tag vector space. Then performed statistical analysis to figure out how comments differentiate movies or actors or genres. Then we went on to build recommender system by latent factor analysis, used discriminative (SVD, PCA) and generative (LDA) to calculate implicit ratings and recommend based on the new ratings.
