@@ -4,6 +4,7 @@ title: Projects
 ---
 
 **[Rainfall prediction](https://github.com/channabasavagola/rainfall-prediction)**:  
+- This analysis is part of the research work. Full paper is [here](http://ieeexplore.ieee.org/document/8284469/).  
 - Data/feature analysis, feature selection and weather forecasting for Bangalore rainfall based on factors like precipitation, min/max/avg temperature, vapour pressure, cloud coverage, wet day frequency.
 
 <img src="/img/rainfallPredictionImage.png" alt="rainfallPredictionImage" style="width: 700px;"/>
