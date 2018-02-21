@@ -24,7 +24,7 @@ A detailed exploratory data analysis can be found [here](https://github.com/chan
 
 <img src="/img/myTopBrowsingSites.png" alt="myTopBrowsingSites" style="width: 600px;"/>
 {% for js in page.customjs %}
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src="../js/pie.js"></script>  
 {% endfor %}
 
