@@ -29,7 +29,7 @@ A detailed exploratory data analysis can be found [here](https://github.com/chan
 {% endfor %} -->
 
 {% for js in page.jsarr %}
-     <script type="text/javascript" src = {{ js }}></script>
+<script type="text/javascript" src = {{ js }} ></script>
 {% endfor %}
 
 My top visited website is Google, because I ask a lot of questions. And second most visited is Gmail, as I'm searching for interenships which is also evident when I see 4, 5, and 7 ranked sites. Third most visited site is [YouTube](https://www.youtube.com/channel/UCv_l4PAiASca3jzSV5NQ2Lg/playlists?view_as=subscriber) from where I learn and watch videos for entertainment.
