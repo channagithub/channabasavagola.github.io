@@ -29,6 +29,7 @@ A detailed exploratory data analysis can be found [here](https://github.com/chan
 {% endfor %} -->
 
 {% for js in page.jsarr %}
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src = {{ js }} ></script>
 {% endfor %}
 
