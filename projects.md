@@ -22,17 +22,15 @@ A detailed exploratory data analysis can be found [here](https://github.com/chan
 **[My chrome browsing history visualization](https://github.com/channabasavagola/myBrowsingAnalysis)**:  
 - I have visualized my browsing history. This works for Mac. To make this work on windows, you need to change the path of "History" file.
 
-<!-- <img src="/img/myTopBrowsingSites.png" alt="myTopBrowsingSites" style="width: 600px;"/>
-{% for js in page.customjs %}
+<img src="/img/myTopBrowsingSites.png" alt="myTopBrowsingSites" style="width: 600px;"/>
+<!-- {% for js in page.customjs %}
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src="../js/pie.js"></script>  
 {% endfor %} -->
 
 {% for js in page.jsarr %}
-     <script type="text/javascript">
-     {% include {{ js }} %}
-     </script>
- {% endfor %}
+     <script type="text/javascript" src = {{ js }}></script>
+{% endfor %}
 
 My top visited website is Google, because I ask a lot of questions. And second most visited is Gmail, as I'm searching for interenships which is also evident when I see 4, 5, and 7 ranked sites. Third most visited site is [YouTube](https://www.youtube.com/channel/UCv_l4PAiASca3jzSV5NQ2Lg/playlists?view_as=subscriber) from where I learn and watch videos for entertainment.
 
