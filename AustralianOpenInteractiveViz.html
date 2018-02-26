@@ -103,13 +103,6 @@ body {
   font-size: 14px;
 }
 
-#title {
-  font-size: 24px;
-  font-weight: 100;
-}
-#title div.large, #title span.large {
-  font-size: 36px;
-}
 .nav-menu ul li {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -117,16 +110,16 @@ body {
 
 #stage {
   position: absolute;
-  left: 680px;
-  top: 20px;
+  left: 780px;
+  top: 40px;
   width: 400px;
   font-size: 20px;
   font-weight: 500;
 }
 #result {
   position: absolute;
-  left: 680px;
-  top: 50px;
+  left: 780px;
+  top: 70px;
   width: 400px;
   font-size: 18px;
   font-weight: 200;
@@ -134,8 +127,8 @@ body {
 
 #score {
   position: absolute;
-  left: 680px;
-  top: 70px;
+  left: 780px;
+  top: 90px;
   width: 400px;
   font-size: 30px;
   font-weight: 500;
@@ -143,8 +136,8 @@ body {
 
 #p1 {
   position: absolute;
-  left: 680px;
-  top: 110px;
+  left: 780px;
+  top: 130px;
   width: 400px;
   font-size: 18px;
   font-weight: 200;
@@ -152,8 +145,8 @@ body {
 
 #error1 {
   position: absolute;
-  left: 680px;
-  top: 130px;
+  left: 780px;
+  top: 150px;
   width: 400px;
   font-size: 18px;
   font-weight: 200;
@@ -161,8 +154,8 @@ body {
 
 #p2 {
   position: absolute;
-  left: 680px;
-  top: 150px;
+  left: 780px;
+  top: 170px;
   width: 400px;
   font-size: 18px;
   font-weight: 200;
@@ -170,20 +163,26 @@ body {
 
 #error2 {
   position: absolute;
-  left: 680px;
-  top: 170px;
+  left: 780px;
+  top: 190px;
   width: 400px;
   font-size: 18px;
   font-weight: 200;
 }
 
+#title div.large, #title span.large {
+  font-size: 36px;
+}
 
 #title {
   position: absolute;
-  top: 10px;
+  top: 40px;
+  left: 240px;
+  font-size: 24px;
+  font-weight: 100;
 }
 #title .large {
-  width: 150px;
+  width: 250px;
 }
 
 </style>
@@ -310,6 +309,7 @@ body {
 <div id="p2"></div>
 <div id="error2"></div>
 
+<div id="interactiveViz" align="center"></div>
 
 <script>
 
@@ -336,7 +336,7 @@ body {
       .innerRadius(function(d) { return Math.max(0, y(d.y)); })
       .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select("#interactiveViz").append("svg")
       .attr("width", width)
       .attr("height", height)
       .append("g")

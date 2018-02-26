@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  
+  <title>Metrics</title>
+
+  <meta name="author" content="Channabasava Gola" />
+
+  
+  <meta name="description" content="Types | Differences | Takeaway">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Technical Blog - Data science | Machine learning" href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/css/style.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Metrics" />
+  
+
+   
+  <meta property="og:description" content="Types | Differences | Takeaway">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2018-01-09-metrics/" />
+  <link rel="canonical" href="http://localhost:4000/2018-01-09-metrics/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Metrics" />
+  
+
+  
+  <meta name="twitter:description" content="Types | Differences | Takeaway">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Technical Blog</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/./projects">Projects</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000">
+	      <img class="avatar-img" src="/img/metrics.jpeg" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h2>Metrics</h2>
+		  
+		    
+			<h2 class="post-subheading">Types | Differences | Takeaway</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on January 9, 2018</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+      
+      <article role="main" class="blog-post">
+        <p>Metric is a measure of the effectiveness of a model. The effectiveness of a model depends on the problem type and is unique. So metric is different for all kinds of problems.</p>
+
+<h2 id="regression-metrics">Regression metrics</h2>
+
+<ul>
+  <li>
+    <p><strong>MSE</strong>: Measures average/mean squared error of our predictions. At each point, calculate the squared difference between predictions and target and average those values over the number of objects.</p>
+
+    <p><img src="/img/MSE.jpeg" alt="MSE" style="width: 200px;" />	N is number of objects. y and y_hat are target and predicted values respectively. y_i and y_hat_i are i^th corresponding values.</p>
+
+    <p>What if we do not use the features to predict target values? What if we predict the <em>same value (optimal value)</em> for all the objects? The optimal value that reduces the MSE is the <em>mean</em> value of the target column. The model that predicts optimal value is the <em>baseline model</em>.</p>
+
+    <p>To illustrate, consider the following target values:</p>
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'target'</span><span class="p">])</span>
+  <span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> 
+    <span class="n">target</span>
+  <span class="mi">0</span>   <span class="mi">5</span>
+  <span class="mi">1</span>   <span class="mi">9</span>
+  <span class="mi">2</span>   <span class="mi">8</span>
+  <span class="mi">3</span>   <span class="mi">6</span>
+  <span class="mi">4</span>  <span class="mi">27</span>
+</code></pre>
+    </div>
+    <p>To build a baseline model, we should find that one constant value which we predict irrespective of the parameters or features. It is is (55/5) i.e. 11. This means, if our prediction is 11 for all objects (rows), we will get the least MSE, which will be our baseline model.</p>
+  </li>
+  <li>
+    <p><strong>RMSE</strong>: Root Mean Square Error is very similar to MSE where we take square root of MSE. Scale of errors and the target values are same. It will be easy to comprehend the error as it is linear now.</p>
+
+    <p>RMSE and MSE are similar in a way where every minimizer of MSE is a minimizer of RMSE and vice-versa.</p>
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">MSE</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">MSE</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;=&gt;</span> <span class="n">RMSE</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">RMSE</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+</code></pre>
+    </div>
+
+    <p>But they are different when we calculate the gradient of RMSE w.r.t i’th prediction which is equal to the gradient of MSE multiplied by some value. This value is called the <em>learning rate</em>. In simple words, it means traveling along MSE gradient is equivalent to traveling along RMSE gradient with different learning rate.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>What would it mean to say, I have a value of 27 for MSE and 0.8 for RMSE? Should I improve my model?</p>
+</blockquote>
+
+<p><em>So it is hard to just come to a conclusion with just absolute values. It depends upon properties of the dataset and the variation in the target vector. We should be interested in knowing how better is our model when compared to constant baseline model!</em></p>
+
+<ul>
+  <li>
+    <p><strong>R-squared</strong>: This metric scores the model 1 if our model is perfect, 0 otherwise.</p>
+
+    <p><img src="/img/r-squared.jpeg" alt="R-squared" style="width: 400px;" /></p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  If MSE is 0 (No error), R-squared is 1.  
+  If MSE is 1 (Worst model), R-squared is 0.  
+</code></pre>
+    </div>
+
+    <p>All models will score between 0 and 1. If we optimize MSE, we are optimizing R-squared.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>The above 3 metrics are similar from an optimization point of view.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p><strong>MAE</strong>: Mean Absolute Error is calculated by averaging the distances(difference) between the absolute target values and the predicted values. So, it doesn’t penalize heavily for huge errors as in case of MSE. So, it is not as sensitive as MSE or influenced by any outliers.</p>
+
+    <p><img src="/img/MAE.jpeg" alt="MAE" style="width: 200px;" /></p>
+
+    <p>It is used in the financial domain where $10 error is double that of $5 error. In contrast to MSE thinks that $10 is 4 times worse than $5 error.</p>
+
+    <p>The optimal value that reduces the MSE is the <em>median</em> value of the target column. This is the baseline model for MAE.</p>
+
+    <p>To illustrate, consider the following target values:</p>
+    <div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'target'</span><span class="p">])</span>
+  <span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> 
+    <span class="n">target</span>
+  <span class="mi">0</span>   <span class="mi">5</span>
+  <span class="mi">1</span>   <span class="mi">9</span>
+  <span class="mi">2</span>   <span class="mi">8</span>
+  <span class="mi">3</span>   <span class="mi">6</span>
+  <span class="mi">4</span>  <span class="mi">27</span>
+</code></pre>
+    </div>
+    <p>To build a baseline model with MAE, we should find that one constant value which we predict irrespective of the parameters or features. It is 8.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>If you are sure that data has outliers, choose MAE.<br />
+If you think they are unexpected values, and needs to be considered to build the model, choose MSE.</p>
+</blockquote>
+
+<p><em>MSE and MAE work with absolute errors. Lets have a look at the following tables.</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>TABLE 1</th>
+      <th style="text-align: center">predicted</th>
+      <th style="text-align: right">sold</th>
+      <th style="text-align: right">MSE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>shop1</strong></td>
+      <td style="text-align: center">9</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td><strong>shop2</strong></td>
+      <td style="text-align: center">999</td>
+      <td style="text-align: right">1000</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td><strong>shop3</strong></td>
+      <td style="text-align: center">900</td>
+      <td style="text-align: right">1000</td>
+      <td style="text-align: right">10000</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>As, it is noticeble that the error in prediction for shop1 is more critical than shop2, MSE comes up with same metric.</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>TABLE 2</th>
+      <th style="text-align: center">predicted</th>
+      <th style="text-align: right">sold</th>
+      <th style="text-align: right">Relative metric</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>shop1</strong></td>
+      <td style="text-align: center">9</td>
+      <td style="text-align: right">10</td>
+      <td style="text-align: right">1</td>
+    </tr>
+    <tr>
+      <td><strong>shop2</strong></td>
+      <td style="text-align: center">900</td>
+      <td style="text-align: right">1000</td>
+      <td style="text-align: right">1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Table 2 is more intuitive.</em></p>
+
+<p>The relative metric errors can be expressed as following metric calculations:</p>
+
+<ul>
+  <li>
+    <p><strong>MSPE</strong>: Mean Square Percentage Error, the difference is quite evident where the difference is divided by target-square value which gives us the relative error. This division by it’s target-square can also be read as adding weight to MSE.</p>
+
+    <p><img src="/img/MSPE.jpeg" alt="MSPE" style="width: 300px;" /></p>
+
+    <p>The optimal value that reduces the MSPE is the <em>weighted mean</em> value of the target column. This is the baseline model for MSPE.</p>
+
+    <blockquote>
+      <p>Also called weighted version of MSE.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>MAPE</strong>: Mean Absolute Percentage Error, as of MSPE, the difference is divided by target value which gives us the relative error.</p>
+
+    <p><img src="/img/MAPE.jpeg" alt="MAPE" style="width: 300px;" /></p>
+
+    <p>The optimal value that reduces the MAPE is the <em>weighted median</em> value of the target column. This is the baseline model for MAPE.</p>
+
+    <blockquote>
+      <p>Also called weighted version of MAE.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p><strong>(R)MSLE</strong>: (Root) Mean Square Logarithmic Error, is RMSE calculated in lagarithmic scale.</p>
+
+    <p><img src="/img/RMSLE.jpeg" alt="RMSLE" style="width: 350px;" /></p>
+
+    <p>We take log values of target and predicted values and compute RMSE between them. As the target and prediction values can be 0, and log(0) is infinity, we will add a constant. It can be anything. In the formula below, 1 is used as a constant.</p>
+
+    <p><img src="/img/alsoRMSLE1.jpeg" alt="alsoRMSLE1" style="width: 250px;" />
+  <img src="/img/alsoRMSLE2.jpeg" alt="alsoRMSLE2" style="width: 250px;" /></p>
+
+    <p>The optimal value that reduces the RMSLE is the <em>weighted mean</em> value of the target column which is inverse transformed to the normal one. This is the baseline model for RMSLE.</p>
+
+    <blockquote>
+      <p>It is just MSE in log space.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>I have jotted metrics for classification in <a href="https://channabasavagola.github.io/2018-01-11-metrics2/">Metrics (Cont…)</a>.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+            data science, machine learning
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Metrics+http://localhost:4000/2018-01-09-metrics/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018-01-09-metrics/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2018-01-08-cross-validation-techniques/" data-toggle="tooltip" data-placement="top" title="Cross validation techniques">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="/2018-01-11-metrics2/" data-toggle="tooltip" data-placement="top" title="Metrics (Cont...)">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'channabasava';
+        /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto: sendmailtochanna@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/channabasava.gola" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://github.com/channabasavagola" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://twitter.com/Channabasava_G" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Channabasava Gola
+      &nbsp;&bull;&nbsp;
+      2018
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">https://channabasavagola.github.io/</a>
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-112265001-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>

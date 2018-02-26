@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  
+  <title>Metrics (Cont...)</title>
+
+  <meta name="author" content="Channabasava Gola" />
+
+  
+  <meta name="description" content="Types | Differences | Takeaway">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Technical Blog - Data science | Machine learning" href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/css/style.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Metrics (Cont...)" />
+  
+
+   
+  <meta property="og:description" content="Types | Differences | Takeaway">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2018-01-11-metrics2/" />
+  <link rel="canonical" href="http://localhost:4000/2018-01-11-metrics2/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Metrics (Cont...)" />
+  
+
+  
+  <meta name="twitter:description" content="Types | Differences | Takeaway">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Technical Blog</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/./projects">Projects</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000">
+	      <img class="avatar-img" src="/img/metrics.jpeg" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h2>Metrics (Cont...)</h2>
+		  
+		    
+			<h2 class="post-subheading">Types | Differences | Takeaway</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on January 11, 2018</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+      
+      <article role="main" class="blog-post">
+        <p>I suggest you to go through <a href="https://channabasavagola.github.io/2018-01-09-metrics/">metrics</a> before this.</p>
+
+<h2 id="classification-metrics">Classification metrics</h2>
+
+<p><em>Soft predictions/labels</em>: These are the probability values that a classifier output. This vector will be of size equal to number of classes.</p>
+
+<p><em>Hard predictions/labels</em>: But usually classifier will be asked to come up with a label that a particular object belongs to.
+This is hard prediction. This can be done in two ways and the choice depends upon the task/problem.</p>
+<ul>
+  <li>arg max function f(x): Where you predict the label with the max soft prediction.</li>
+  <li>threshold: For binary classification it can be [f(x) &gt; b], where you predict a certain label for the soft prediction values above/below threshold.</li>
+</ul>
+
+<p><strong>Accuracy</strong>: This works on hard predictions. You will get to know the “percentage of correct predicted labels”.<br />
+If the dataset has 90% ‘label1’ and you just predict ‘label1’ for all the objects. Your accuracy is pretty high. This is misleading as your model has learned nothing.<br />
+This also doesn’t consider the confidence of the model when it was considering soft predictions to make a hard prediction.</p>
+
+<blockquote>
+  <p>We need to consider metrics that consider soft predictions and are easier to optimize.</p>
+</blockquote>
+
+<p><strong>Logarithmic loss</strong>: This works on soft prediction. Log loss score is kind of penalty for the classification. For pretty bad prediction logloss penalizes heavily (expect a higher score).
+Minimizing log loss maximizes accuracy.</p>
+
+<blockquote>
+  <p>Before AUC ROC, we need to learn few terminologies and there layman definitions which are pretty important in data science. <br />
+Following is a self explanatory <strong>confusion matrix</strong>. You should be able to come up with your own definition from the matrix
+ for the terminologies <strong>True Negative</strong>, <strong>False Negative</strong>, <strong>True Positive</strong>, and <strong>False Positive</strong>.</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>Actual/Prediction</th>
+      <th style="text-align: center">Predicted : No</th>
+      <th style="text-align: right">Predicted : Yes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Actual: No</strong></td>
+      <td style="text-align: center">True Negative</td>
+      <td style="text-align: right">False Positive</td>
+    </tr>
+    <tr>
+      <td><strong>Actual: Yes</strong></td>
+      <td style="text-align: center">False Negative</td>
+      <td style="text-align: right">True Positive</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<blockquote>
+  <p>I have attached a self explanatory image from Wikipedia for the terminologies <strong>Precision</strong> and <strong>Recall</strong>.
+I find this to be the best one to avoid confusion and also to remember.</p>
+</blockquote>
+
+<p><img src="/img/precisionRecall1.jpeg" alt="precisionRecall1" style="width: 250px;" />       <img src="/img/precisionRecall2.jpeg" alt="precisionRecall" style="width: 450px;" /></p>
+
+<blockquote>
+  <p>So, <strong>Recall</strong> is also called as <strong>Sensitivity</strong>, <strong>Probability of detection</strong> and <strong>True Positive Rate</strong> which is very important to understand AUCROC.
+One more terminology <strong>False Positive Rate</strong> is important.</p>
+  <ul>
+    <li><strong>False Positive Rate</strong> = <em>False Positive/Actual: No</em></li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong><a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity">Specificity</a>, <a href="http://conflict.lshtm.ac.uk/page_129.htm">prevalence</a>, and <a href="https://en.wikipedia.org/wiki/F1_score">F score</a></strong> are worth mentioning.</p>
+</blockquote>
+
+<p><strong>AUC ROC</strong>: This is for both balanced and unbalanced dataset(most objects of particular label). <em>Receiver Operating Characteristic Curve(ROC)</em> is obtained when you plot <em>true positive rate(y-axis)</em> against <em>false positive rate(x-axis)</em> for a classification threshold. We can experiment with threshold to get different ROC. <br />
+Area Under Curve (AUC) is the area under ROC. You can select the threshold with highest AUC.
+For worst classification, AUC is 0.5. Best(ideal) classification AUC is 1. (0.8 - 0.9) AUC is considered good.</p>
+
+<p><img src="/img/ROC.jpeg" alt="ROC" style="width: 200px;" /></p>
+
+<p><strong>References</strong></p>
+<ul>
+  <li>For ROC <a href="http://gim.unmc.edu/dxtests/roc3.htm">1</a>, <a href="http://www.navan.name/roc/">2</a>, <a href="http://www.dataschool.io/roc-curves-and-auc-explained/">3</a>, <a href="http://people.inf.elte.hu/kiss/13dwhdm/roc.pdf">4</a>.</li>
+  <li>These are just awesome and are for my own referral. <a href="http://queirozf.com/entries/evaluation-metrics-for-classification-quick-examples-references#metric-auc-area-under-roc-curve">1</a>, <a href="https://en.wikipedia.org/wiki/Confusion_matrix">2 (wiki)</a>.</li>
+  <li>I am learning a lot from this <a href="https://www.coursera.org/learn/competitive-data-science">course</a>.</li>
+</ul>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+            data science, machine learning
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Metrics+%28Cont...%29+http://localhost:4000/2018-01-11-metrics2/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018-01-11-metrics2/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2018-01-09-metrics/" data-toggle="tooltip" data-placement="top" title="Metrics">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'channabasava';
+        /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto: sendmailtochanna@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/channabasava.gola" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://github.com/channabasavagola" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://twitter.com/Channabasava_G" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Channabasava Gola
+      &nbsp;&bull;&nbsp;
+      2018
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">https://channabasavagola.github.io/</a>
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-112265001-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>

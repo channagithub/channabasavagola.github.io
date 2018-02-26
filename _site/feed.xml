@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical Blog</title>
+    <description>Data science | Machine learning</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Metrics (Cont...)</title>
+        <description>
+          Types | Differences | Takeaway - 
+          I suggest you to go through metrics before this. Classification metrics Soft predictions/labels: These are the probability values that a classifier output. This vector will be of size equal to number of classes. Hard predictions/labels: But usually classifier will be asked to come up with a label that a particular...
+        </description>
+        <pubDate>Thu, 11 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-11-metrics2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-11-metrics2/</guid>
+      </item>
+    
+      <item>
+        <title>Metrics</title>
+        <description>
+          Types | Differences | Takeaway - 
+          Metric is a measure of the effectiveness of a model. The effectiveness of a model depends on the problem type and is unique. So metric is different for all kinds of problems. Regression metrics MSE: Measures average/mean squared error of our predictions. At each point, calculate the squared difference between...
+        </description>
+        <pubDate>Tue, 09 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-09-metrics/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-09-metrics/</guid>
+      </item>
+    
+      <item>
+        <title>Cross validation techniques</title>
+        <description>
+          Differences | Takeaway - 
+          For instance consider the data set with 100 objects to train. Random subsampling: Randomly split shuffled 100 objects into train set and test set. It can be 80–20, 70–30, 60–40. This is also called as Hold-out. Good for huge data. If you are getting similar scores and optimal model’s parameters...
+        </description>
+        <pubDate>Mon, 08 Jan 2018 00:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2018-01-08-cross-validation-techniques/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018-01-08-cross-validation-techniques/</guid>
+      </item>
+    
+  </channel>
+</rss>

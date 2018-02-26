@@ -1,5 +1,8 @@
 # Beautiful Jekyll
 
+To Run local server: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
+> $ bundle exec jekyll serve
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
 [![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
 
