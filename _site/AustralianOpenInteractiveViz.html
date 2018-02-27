@@ -474,6 +474,14 @@ body {
           // d3.select("#p2").html((d.name == d.children[1].name ? d.children[0].name : d.children[1].name));
         }
         )
+        .on("mouseout", function(d){
+          d3.select("#error").html("")
+          d3.select("#ace").html("")
+          d3.select("#p1").html("")
+          d3.select("#result").html("")
+          d3.select("#stage").html("")
+          d3.select("#score").html("")
+        })
   });
 
   function click(d) {
