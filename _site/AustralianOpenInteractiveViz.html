@@ -143,7 +143,7 @@ body {
   font-weight: 200;
 }
 
-#error1 {
+#error {
   position: absolute;
   left: 880px;
   top: 120px;
@@ -152,19 +152,11 @@ body {
   font-weight: 200;
 }
 
-#p2 {
+
+#ace {
   position: absolute;
   left: 880px;
   top: 140px;
-  width: 400px;
-  font-size: 18px;
-  font-weight: 200;
-}
-
-#error2 {
-  position: absolute;
-  left: 880px;
-  top: 160px;
   width: 400px;
   font-size: 18px;
   font-weight: 200;
@@ -183,6 +175,67 @@ body {
 }
 #title .large {
   width: 250px;
+}
+
+
+#triangle-up-error {
+  position: absolute;
+  width: 0;
+  height: 0;  
+  left: 880px;
+  top: 140px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #42f445;
+
+  font-size: 18px;
+  font-weight: 200;
+}
+
+#triangle-down-error {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 880px;
+  top: 140px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #e82929;
+
+
+  font-size: 18px;
+  font-weight: 200;
+
+}
+#triangle-up-ace {
+  position: absolute;
+  width: 0;
+  height: 0;  
+  left: 880px;
+  top: 180px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #42f445;
+  
+
+  font-size: 18px;
+  font-weight: 200;
+}
+
+#triangle-down-ace {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 880px;
+  top: 180px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #e82929;
+  
+
+  font-size: 18px;
+  font-weight: 200;
+
 }
 
 </style>
@@ -305,9 +358,12 @@ body {
 <div id="result"></div>
 <div id="score"></div>
 <div id="p1"></div>
-<div id="error1"></div>
+<!-- <div id="triangle-up-error"></div><div id="triangle-down-error"></div>
+<div id="error"></div>
 <div id="p2"></div>
-<div id="error2"></div>
+<div id="triangle-up-ace"></div><div id="triangle-down-ace"></div> -->
+<div id="error"></div>
+<div id="ace"></div>
 
 <div id="interactiveViz" align="center"></div>
 
@@ -344,7 +400,7 @@ body {
 
   // d3.json("flare.json", function(error, root) {
   // d3.json("zoomableFlare.json", function(error, root) {
-  d3.json("mine_flare_zoomable_tennis.json", function(error, root) {
+  d3.json("mine_flare_zoomable_tennis1.json", function(error, root) {
     if (error) throw error;
 
     svg.selectAll("path")
@@ -365,10 +421,59 @@ body {
           d3.select("#result").html(d.name + " beat " + (d.name == d.children[1].name ? d.children[0].name : d.children[1].name));
           d3.select("#score").html(d.result);
           d3.select("#p1").html(d.name);
-          d3.select("#error1").html("unforcedErrors: " + d.error1);
-          d3.select("#p2").html((d.name == d.children[1].name ? d.children[0].name : d.children[1].name));
-          d3.select("#error2").html("unforcedErrors: " + d.error2);
-        })
+
+// assignment <font color="red">
+
+
+      var err = d.error1 - d.error2;
+          if (err >= 0){
+            d3.select("#error").html("<font color=\"red\">" + err + " unforced errors</font>");
+          }else{
+            d3.select("#error").html("<font color=\"green\">" + Math.abs(err) + " unforced errors</font>");
+          }
+          var a = d.ace1 - d.ace2;
+          if (a >= 0){
+            d3.select("#ace").html("<font color=\"green\">"+a + " unforced errors</font>");
+          }else{
+
+            d3.select("#ace").html("<font color=\"red\">" + Math.abs(a) + " unforced errors</font>");
+          }
+      
+      // var err = d.error1 - d.error2;
+      //     if (err >= 0){
+      //       d3.select("#triangle-up-error").style("opacity",1).html("<nobr> " + err + " unforced errors</nobr>");
+      //       d3.select("#triangle-down-error").style("opacity",0);
+      //     }else{
+      //       d3.select("#triangle-up-error").style("opacity",0);
+      //       d3.select("#triangle-down-error").style("opacity",1).html("<nobr> "+ Math.abs(err) + " unforced errors</nobr>");
+      //     }
+      //     var a = d.ace1 - d.ace2;
+      //     if (a >= 0){
+      //       d3.select("#triangle-down-ace").style("opacity",0);
+      //       d3.select("#triangle-up-ace").style("opacity",1).html("<nobr> "+ a + " ace</nobr>");
+      //     }else{
+      //       d3.select("#triangle-up-ace").style("opacity",0);
+      //       d3.select("#triangle-down-ace").style("opacity",1).html("<nobr> "+ Math.abs(err) + " ace</nobr>");
+      //     }
+          // var err = d.error1 - d.error2;
+          // if (err >= 0){
+          //   d3.select("#error").html("<div class=\"triangle-up-error\"></div>"
+          //   + " " + err + " unforced errors");
+          // }else{
+          //   d3.select("#error").html("<div class=\"triangle-down-error\"></div>"
+          //   + " " + Math.abs(err) + " unforced errors");
+          // }
+          // var a = d.ace1 - d.ace2;
+          // if (a >= 0){
+          //   d3.select("#ace").html("<div class=\"triangle-up-error\"></div>"
+          //   + " " + a + " aces");
+          // }else{
+          //   d3.select("#ace").html("<div class=\"triangle-down-error\"></div>"
+          //   + " " + Math.abs(a) + " aces");
+          // }
+          // d3.select("#p2").html((d.name == d.children[1].name ? d.children[0].name : d.children[1].name));
+        }
+        )
   });
 
   function click(d) {
