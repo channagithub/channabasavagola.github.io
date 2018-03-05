@@ -8,6 +8,7 @@ My name is Channabasava Gola. I am a graduate student at [ASU](https://www.asu.e
 
 - [Full resume](./../files/resumeChannabasava2018.pdf)
 - [Projects](./../projects)
+- Data Analyst at [Decision Theater](https://dt.asu.edu/)
 - Former software engineer at [BigBasket.com](https://www.bigbasket.com/) and [Aricent](https://www.aricent.com/).
 - Pythonista. (Language not a problem)
 - I'm [reading](https://www.goodreads.com/user/show/59536279-channabasava-gola) the book 'The inevitable'.
