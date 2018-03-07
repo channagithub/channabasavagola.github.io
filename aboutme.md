@@ -26,5 +26,5 @@ My name is Channabasava Gola. I am a Data Analyst at [Decision Theater](https://
 
 ### My vlog
 
-I have shot and edited a [video](https://www.youtube.com/watch?v=bFj3R9JbolY) about beautiful and stunning place in India and hopefully **it must be nice**.    
-		[![Leh in winters by Channa](http://img.youtube.com/vi/bFj3R9JbolY/0.jpg)](http://www.youtube.com/watch?v=bFj3R9JbolY "Leh in winters")
+I have shot and edited a [video](https://www.youtube.com/watch?v=bFj3R9JbolY) about beautiful and stunning place in India and hopefully **it must be nice**.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bFj3R9JbolY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
