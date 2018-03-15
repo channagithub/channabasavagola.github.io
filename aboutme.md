@@ -4,6 +4,10 @@ title: About me
 subtitle: "'Questions are answers'"
 ---
 
+<!-- <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="channabasava-gola"><a class="LI-simple-link" href='https://www.linkedin.com/in/channabasava-gola?trk=profile-badge'>Channabasava Gola</a></div> -->
+
+<!-- <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="channabasava-gola"><a class="LI-simple-link" href='https://www.linkedin.com/in/channabasava-gola?trk=profile-badge'>Channabasava Gola</a></div> -->
+
 My name is Channabasava Gola. I am a Data Analyst at [Decision Theater](https://dt.asu.edu/) and a graduate student at [ASU](https://www.asu.edu/) in [computer science](https://cidse.engineering.asu.edu/). I am starting with writing short articles in the field of Data Science and Machine Learning which I learn from other sources. Hopefully you and me, both benefit from this.
 
 - [Full resume](./../files/resumeChannabasava2018.pdf)
