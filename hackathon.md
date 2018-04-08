@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Yelp dataset Visualization
+title: Data Analysis - Yelp
 jsarr:
  - D3js/pie.js
 ---
