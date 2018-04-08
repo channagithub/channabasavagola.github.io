@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="//d3js.org/d3.v3.min.js"></script>
+  
+  <title>Yelp dataset Visualization</title>
+
+  <meta name="author" content="Channabasava Gola" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Technical Blog - Data science | Machine learning" href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+      <link rel="stylesheet" href="/css/style.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Yelp dataset Visualization" />
+  
+
+   
+  <meta property="og:description" content="- Restaurants have huge potential to impact on the country as they play an important role in business and social life. Both minor and major events are celebrated in the restaurants so they lie at the heart of our lives and thus opening a successful restaurant is dream project for...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/hackathon/" />
+  <link rel="canonical" href="http://localhost:4000/hackathon/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+  
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Yelp dataset Visualization" />
+  
+
+  
+  <meta name="twitter:description" content="- Restaurants have huge potential to impact on the country as they play an important role in business and social life. Both minor and major events are celebrated in the restaurants so they lie at the heart of our lives and thus opening a successful restaurant is dream project for...">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/avatar-icon.png" />
+  
+  
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Technical Blog</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/./projects">Projects</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000 ">
+	      <img class="avatar-img" src="/img/avatar-icon.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h2>Yelp dataset Visualization</h2>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <ul>
+  <li>
+    <p>Restaurants have huge potential to impact on the country as they play an important role in business and social life. Both minor and major events are celebrated in the restaurants so they lie at the heart of our lives and thus opening a successful restaurant  is dream project for most of the business owners. So, we are here to help in fulfilling the dreamers who want to own their restaurant, and to achieve this, we have taken publically available yelp dataset. Since this dataset is reliable and can be used in any application, we have used  JSON files in an innovative way to answer the queries of the business owners. The data has been analysed and visualised using python and Tableau.</p>
+  </li>
+  <li>
+    <p>When a person plans to start a business, he/she will be bombarded with queries for which finding the accurate answers make all the difference in the business. There is so much of data on the internet which need to be discovered, pulled, cleansed, analysed, filtered, transformed and finally converted to retrieve the required information. Based on this information, one has to plan the business keenly but for a common man, it is a tedious task as it’s difficult to keep himself/herself updated on the current technologies all the time. So, we have come up with the scalable dashboard using which any user can interact to fetch substantial info required to start a successful restro across various parts of the United States.</p>
+  </li>
+</ul>
+
+<iframe src="https://public.tableau.com/views/hackathonMainViz/Dashboard2?:showVizHome=no&amp;:embed=true" width="100%" height="800"></iframe>
+
+<ul>
+  <li>
+    <p>The developed dashboard is interactive and users can discover the information that has been  hidden in the form of layers through effortless interactions. The main dashboard helps to draw a great quality of information in few milliseconds about the relative ratings in the prominent states (NV, AZ, PA, NC, IL, NY) of the United States. It will aid to grasp the order of ratings in a state which has been represented in different shades of effective purple color i.e. dark color represents the total number of corresponding rating is pretty high. For example, North Carolina has the darkest shade for rating 4 indicating there are more number of 4 ratings comparatively. Based on this info, user can strategize the business plans. For example, if a state has the highest number of rating two then he should discover all the cons of the restaurants present in that particular state and should emerge with a well facilitated restro to attain the popularity.</p>
+  </li>
+  <li>
+    <p>In the second phase, one could see the number of reviews received for various categories (Japanese, Sushi bars, coffee &amp; Tea … ) for a chosen rating with a click of a button. This assists viewer to comprehend the contribution of each category towards the total average rating. If certain set of categories have less review counts for high rating then more particulars/statistics need to be collected for those classifications as opening a cafeteria(or a business) in one of those categories will have a high probability of success. On the similar note, if any category has received pretty high review counts for high rating then likelihood of favorable outcome gets reduced as visualization evidently reveals that the existing restros are already meeting the customers expectation. This is just one perspective which is being explained and justified here but our efficacious visualization has competence to expose numerous concealed patterns.</p>
+  </li>
+  <li>
+    <p>Now let’s talk about the most chaotic subject which is the features which need to be incorporated to drive more customers along with serving delicious and nutritious food. There are innumerable attributes to pick from, but cautious and economical decision along with the innovative features help to get recognized among other recurrent restros. To make spectators piece of work easier, we have designed enthralling visualization which reflects the features available in low and high rating restros with a quantity indicating the number of restaurants having the corresponding features. Suppose if wifi has the highest number followed by facility to drive through then employer can include both or if there is any economical constraints then based on further inspection and interaction with the panel, he can derive a conclusion and execute it.</p>
+  </li>
+</ul>
+
+
+	    
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto: sendmailtochanna@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/channabasava.gola" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://github.com/channabasavagola" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://twitter.com/Channabasava_G" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Channabasava Gola
+      &nbsp;&bull;&nbsp;
+      2018
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">https://channabasavagola.github.io/</a>
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-112265001-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>
