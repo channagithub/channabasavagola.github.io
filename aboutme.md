@@ -10,7 +10,7 @@ subtitle: "'Questions are answers'"
 
 My name is Channabasava Gola. I am a Data Analyst at [Decision Theater](https://dt.asu.edu/) and a graduate student at [ASU](https://www.asu.edu/) in [computer science](https://cidse.engineering.asu.edu/). I am starting with writing short articles in the field of Data Science and Machine Learning which I learn from other sources. Hopefully you and me, both benefit from this.
 
-- [Full resume](./../files/resumeChannabasava2018.pdf)
+- [Full resume](./../files/resume_cgola.pdf)
 - [Projects](./../projects)
 - Former software engineer at [BigBasket.com](https://www.bigbasket.com/) and [Aricent](https://www.aricent.com/).
 - Pythonista. (Language not a problem)
