@@ -21,6 +21,9 @@ body {
     margin-left: 15% !important;
     margin-top: 10% !important;
 }
+.iframe {
+  display:block
+}
 }
 p {
   line-height: 1.5;
